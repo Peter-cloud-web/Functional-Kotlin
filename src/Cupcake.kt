@@ -4,6 +4,10 @@ class Cupcake(flavour: String) : BakeryGood(flavour) {
         return "very sweet $flavour cupcake"
 
     }
+
+    fun eating(cupcake: Cupcake?){
+       print("munch")
+    }
 //override open method in parent class Bakery good
     override fun name(): String {
         return "\n\n\nCupcake"
@@ -18,10 +22,16 @@ class Cupcake(flavour: String) : BakeryGood(flavour) {
 }
 
     fun main(cakes: Array<String>) {
-        val myBlueBerry = Cupcake("blueBerry").toString()
+        val myBlueBerry:Cupcake? = null
         val myAlmond = Cupcake("Almond")
         val myCheese = Cupcake("Cheese")
         val myCaramel = Cupcake("Caramel")
+
+        val r = myAlmond.eating(myAlmond);
+        val c = myAlmond.eating(null);
+
+        print("c : $c\n")
+        print("r : $r\n")
 
 
         print(
@@ -30,10 +40,11 @@ class Cupcake(flavour: String) : BakeryGood(flavour) {
                     "\n${myCheese}" +
                     "\n${myCaramel}" +
                     "\n${myBlueBerry}" +
-                    "use of companion objects :${Cupcake.Companion}"
+                    "use of companion objects :${Cupcake.Bake}"
         )
 
         //calling the eat method using the myAlmond instance of Cupcake class
         print(myAlmond.eat())
         print(myAlmond.name())
     }
+
