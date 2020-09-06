@@ -1,3 +1,4 @@
+//declaring a class as object means you dont have to create an instance of to access its properties or methods
 object Oven {
     fun process(product:String){
         print("$product")

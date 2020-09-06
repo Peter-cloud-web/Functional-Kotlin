@@ -8,6 +8,12 @@ class Cupcake(flavour: String) : BakeryGood(flavour) {
     override fun name(): String {
         return "\n\n\nCupcake"
     }
+   //Objects declared inside a class/interface can be marked as companion objects
+    companion object{
+        fun almond():Cupcake{
+            return Cupcake("almond")
+        }
+    }
 }
 
     fun main(cakes: Array<String>) {
@@ -15,13 +21,15 @@ class Cupcake(flavour: String) : BakeryGood(flavour) {
         val myAlmond = Cupcake("Almond")
         val myCheese = Cupcake("Cheese")
         val myCaramel = Cupcake("Caramel")
+        val objectified = Cupcake.almond()
 
         print(
             "My favourite flavours are \n${myAlmond}" +
                     "\n$myBlueBerry" +
                     "\n${myCheese}" +
                     "\n${myCaramel}" +
-                    "\n${myBlueBerry}"
+                    "\n${myBlueBerry}" +
+                    "use of companion objects :$objectified"
         )
 
         //calling the eat method using the myAlmond instance of Cupcake class
