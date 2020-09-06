@@ -2,6 +2,11 @@ class ObjectSingletons {
 
 
 }
+//Objects are natural singletons in kotlin
+//Every object in kotlin is a singleton
+//Object expressions witout a type like the one bellow
+//can only be accessed locally inside a method or class
+
 
 fun main(args:Array<String>){
     val expression = object {
